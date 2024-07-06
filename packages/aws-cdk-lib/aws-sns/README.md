@@ -94,6 +94,17 @@ myTopic.addSubscription(new subscriptions.LambdaSubscription(fn, {
 }));
 ```
 
+## Display Name
+
+You can set a display name for the topic.
+To set a display name, use the `displayName` property:
+
+```ts
+const topic = new sns.Topic(this, 'Topic', {
+  displayName: 'MyDisplayName',
+});
+\```
+
 #### Payload-based filtering
 
 To filter messages based on the payload or body of the message, use the `filterPolicyWithMessageBody` property. This type of filter policy supports creating filters on nested objects.
